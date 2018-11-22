@@ -17,7 +17,7 @@ public class MayinTarlasi {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        int bos=0;
          Random rand = new Random();
         Scanner input = new Scanner (System.in);
         int Dizi [][] = {
@@ -27,15 +27,19 @@ public class MayinTarlasi {
             {rand.nextInt(2),rand.nextInt(2),rand.nextInt(2),rand.nextInt(2),rand.nextInt(2)},
             {rand.nextInt(2),rand.nextInt(2),rand.nextInt(2),rand.nextInt(2),rand.nextInt(2)}
         };
-        /*
-        for(int i=0;i<Dizi.length;i++)
+        
+        for(int k=0;k<Dizi.length;k++)
         {
-        for(int j=0;j<Dizi.length;j++)
+        for(int l=0;l<Dizi.length;l++)
         {
-          System.out.print(Dizi[i][j]+" ");
+          if(Dizi[k][l]==0)
+          {
+             bos++;
+          }
         }
-        System.out.println();
-        }*/
+        }
+        System.out.println(bos);
+        
         int puan =0;
         System.out.println("--- Mayın Tarlası (5x5) ---");
         System.out.println("Oyuna Başlamak İçin Konum Giriniz");
@@ -44,7 +48,7 @@ public class MayinTarlasi {
         System.out.println("Sütun Giriniz (1-5)");
         int sutun = input.nextInt()-1;
         int i;
-        for (i=0;i<23;i++){
+        for (i=0;i<bos;i++){
             
              if (sutun<0 || sutun>4 || satir<0 || satir>4 )
         {
