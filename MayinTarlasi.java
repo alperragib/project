@@ -38,7 +38,6 @@ public class MayinTarlasi {
           }
         }
         }
-        System.out.println(bos);
         
         int puan =0;
         System.out.println("--- Mayın Tarlası (5x5) ---");
